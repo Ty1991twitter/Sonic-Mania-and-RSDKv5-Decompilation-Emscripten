@@ -319,11 +319,7 @@ int32 RSDK::RunRetroEngine(int32 argc, char *argv[])
 #endif
     }
 #else
-    emscripten_set_main_loop(
-        StepRetroEngineEmscripten,
-        0,
-        false
-    );
+    emscripten_set_main_loop(StepRetroEngineEmscripten, 0, 1);
 #endif
     return 0;
 }
